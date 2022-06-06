@@ -21,26 +21,26 @@ class ServisTest1 {
 
     @ParameterizedTest
     @MethodSource("paramForTesting")
-    void plus(int testNum1, int testNum2) {
+    void shouldPlusCorrectly(int testNum1, int testNum2) {
         assertEquals(testNum1 + "+" + testNum2 + "=" + (testNum1 + testNum2), out.plus(testNum1, testNum2));
     }
 
     @ParameterizedTest
     @MethodSource("paramForTesting")
-    void minus(int testNum1, int testNum2) {
+    void shouldMinusCorrectly(int testNum1, int testNum2) {
         assertEquals(testNum1 + "-" + testNum2 + "=" + (testNum1 - testNum2), out.minus(testNum1, testNum2));
     }
 
     @ParameterizedTest
     @MethodSource("paramForTesting")
-    void multiple(int testNum1, int testNum2) {
+    void shouldMultipleCorrectly(int testNum1, int testNum2) {
         assertEquals(testNum1 + "*" + testNum2 + "=" + (testNum1 * testNum2), out.multiple(testNum1, testNum2));
 
     }
 
     @ParameterizedTest
     @MethodSource("paramForTesting")
-    void divide(int testNum1, int testNum2) {
+    void shouldDivideCorrectly(int testNum1, int testNum2) {
         assertEquals(testNum1 + "/" + testNum2 + "=" + (testNum1 / testNum2), out.divide(testNum1, testNum2));
     }
 
